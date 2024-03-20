@@ -61,7 +61,7 @@ public class UserController {
 
     @PutMapping(USER_API_ENDPOINT+"/{userId}")
     public User UpdateUserScore(@PathVariable String userId, @RequestBody UpdateScoreDto entity) {
-        return userService.updateUserScore(Integer.parseInt(entity.getUserId()),entity.getScore());
+        return userService.updateUserScore(Integer.parseInt(userId),entity.getScore());
     }
 
     @DeleteMapping(USER_API_ENDPOINT+"/{userId}")
